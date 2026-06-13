@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<script>
+/* One link, smart entry: send Russian-language visitors to /ru/.
+   Runs only on the English root. Respects a saved choice, never loops,
+   and never blocks the EN/RU toggle. Search engines index both pages normally. */
+(function(){
+  try{
+    var pref=localStorage.getItem('lang_pref');
+    if(pref==='en') return;                 // user chose English before — stay
+    var toRu=function(){location.replace(location.protocol==='file:'?'ru/index.html':'ru/');};
+    if(pref==='ru'){toRu();return;}         // user chose Russian before
+    var l=(navigator.language||navigator.userLanguage||'').toLowerCase();
+    if(l.indexOf('ru')===0) toRu();         // first visit, Russian browser
+  }catch(e){}
+})();
+</script>
+<title>It Was Never You — a raw, honest book about guilt, karma and freedom | Abhijeet Rai</title>
+<meta name="description" content="They told you your pain is your karma. Something inside you always said no. A raw, honest book about God, guilt, and who is really living your life — by Abhijeet Rai." />
+<link rel="canonical" href="https://abhijeetrai.com/" />
+<meta name="author" content="Abhijeet Rai" />
+<meta name="robots" content="index, follow, max-image-preview:large" />
+<meta name="theme-color" content="#0b0e16" />
+
+<meta property="og:type" content="book" />
+<meta property="og:site_name" content="Abhijeet Rai" />
+<meta property="og:title" content="It Was Never You" />
+<meta property="og:description" content="They told you your pain is your karma. Something inside you always said no. A raw, honest book about God, guilt, and who is really living your life." />
+<meta property="og:url" content="https://abhijeetrai.com/" />
+<meta property="og:image" content="https://abhijeetrai.com/assets/cover_en.jpg" />
+<meta property="og:locale" content="en_US" />
+<meta property="og:locale:alternate" content="ru_RU" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="It Was Never You" />
+<meta name="twitter:description" content="A raw, honest book about guilt, karma, and who is really living your life." />
+<meta name="twitter:image" content="https://abhijeetrai.com/assets/cover_en.jpg" />
+
+<link rel="alternate" hreflang="en" href="https://abhijeetrai.com/" />
+<link rel="alternate" hreflang="ru" href="https://abhijeetrai.com/ru/" />
+<link rel="alternate" hreflang="x-default" href="https://abhijeetrai.com/" />
+
+<script type="application/ld+json">
+{
+ "@context":"https://schema.org",
+ "@graph":[
+  {"@type":"WebSite","@id":"https://abhijeetrai.com/#website","url":"https://abhijeetrai.com/","name":"Abhijeet Rai","inLanguage":["en","ru"],"author":{"@id":"https://abhijeetrai.com/#author"}},
+  {"@type":"Person","@id":"https://abhijeetrai.com/#author","name":"Abhijeet Rai","alternateName":"Абхиджит Рай","url":"https://abhijeetrai.com/","jobTitle":"Author","nationality":"Indian","description":"Writer from Delhi, India, with a science background and years of Kriya Yoga practice in the lineage of Sri Yukteshwar and Paramahansa Yogananda. Writes on non-duality, consciousness, free will, karma, and the end of guilt.","knowsAbout":["non-duality","Advaita Vedanta","consciousness","free will","karma","Kriya Yoga","spiritual awakening","God"],"email":"abhijeet.rai.loves@gmail.com"},
+  {"@type":"Book","@id":"https://abhijeetrai.com/#book","name":"It Was Never You","alternativeHeadline":"Freedom from Guilt, Karma, and the God You Were Taught to Fear","author":{"@id":"https://abhijeetrai.com/#author"},"inLanguage":["en","ru"],"bookFormat":"https://schema.org/EBook","numberOfPages":"100","genre":["Non-duality","Spirituality","Personal Transformation","Philosophy"],"about":["guilt","karma","free will","suffering","non-duality","consciousness","God"],"image":"https://abhijeetrai.com/assets/cover_en.jpg","url":"https://abhijeetrai.com/","description":"They told you your pain is your karma. Something inside you always said no. A raw, honest book that takes guilt, the fear of God, and the feeling that you are failing, and looks at them so honestly they cannot survive the looking. Step by step, with simple logic and a little science, it shows there is only One here, and you are it.","workExample":[{"@type":"Book","inLanguage":"en","name":"It Was Never You","bookFormat":"https://schema.org/EBook"},{"@type":"Book","inLanguage":"ru","name":"Это был не ты","bookFormat":"https://schema.org/EBook"}]},
+  {"@type":"FAQPage","mainEntity":[
+    {"@type":"Question","name":"Is my suffering really my karma?","acceptedAnswer":{"@type":"Answer","text":"This book argues no. Karma-as-blame needs a free, separate doer who chose wrongly. Look closely and that doer cannot be found; thoughts, desires and actions arise from causes you never chose. Results are real, but blame is the illusion."}},
+    {"@type":"Question","name":"Does free will exist?","acceptedAnswer":{"@type":"Answer","text":"The book invites you to look for the chooser in your own experience, and shows that a decision is desires and fears settling on their own, with a voice claiming credit afterwards. When the doer dissolves, the guilt built on it dissolves too."}},
+    {"@type":"Question","name":"What does everything is God mean?","acceptedAnswer":{"@type":"Answer","text":"Science finds one vibrating energy beneath all matter; the saints call that one reality God. Not God made the world, but everything is God: one being appearing as many. Reached through honest questions, not blind faith."}},
+    {"@type":"Question","name":"Is this against my religion?","acceptedAnswer":{"@type":"Answer","text":"It does not attack any religion. It questions one picture of God, the separate king who keeps accounts, and offers another way of seeing rooted in the oldest ideas of India. Many religious readers say it made their faith deeper."}},
+    {"@type":"Question","name":"My English is not strong. Can I read it?","acceptedAnswer":{"@type":"Answer","text":"Yes. It is written in simple, short sentences on purpose. A full Russian edition, Это был не ты, is also available."}},
+    {"@type":"Question","name":"Are there rules, rituals, or homework?","acceptedAnswer":{"@type":"Answer","text":"None. Each chapter ends with a single question to sit with. That is all."}}
+  ]}
+ ]
+}
+</script>
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+<header><div class="bar">
+  <a class="brand" href="#top">Abhijeet Rai</a>
+  <span class="lang"><a class="active" href="index.html" data-setlang="en">EN</a><a href="ru/index.html" data-setlang="ru">RU</a></span>
+</div></header>
+<a id="top"></a>
+
+<div class="hero">
+  <canvas id="dust"></canvas>
+  <div class="wrap">
+    <p class="qs">Who put me here without asking me?<br>Why do my prayers feel empty?</p>
+    <h1>It Was Never <span class="you">You</span></h1>
+    <p class="subtitle">Freedom from guilt, karma, and the God you were taught to fear — for everyone who prayed and felt nothing.</p>
+    <img class="cover" src="assets/cover_en.jpg" alt="It Was Never You — book cover" />
+    <p class="tagline">They told you your pain is your karma.<br><b>Something inside you always said no.</b></p>
+    <div class="cta">
+      <a class="btn" href="#buy">Get the book</a>
+      <a class="btn ghost" href="#mirror">Is this you?</a>
+    </div>
+  </div>
+</div>
+
+<div class="wrap">
+
+  <section id="mirror" class="mirror">
+    <h2><span class="label">Is this you?</span>Be honest. Have you felt any of these?</h2>
+    <p>You prayed with your full heart… and felt like you were talking to the ceiling.</p>
+    <p>You were told your suffering is your karma — your own fault — and something deep inside refused to accept it. Then you felt guilty for refusing.</p>
+    <p>You look at this world — animals eaten alive, good people crushed — and you cannot believe a loving God designed it. But you cannot believe it is all for nothing, either.</p>
+    <p>You carry guilt for mistakes that are years old. You have punished yourself a thousand times, and the guilt still does not leave.</p>
+    <p>You tried gurus, groups, meditation apps, rules and rituals… and a quiet voice kept saying: <em>this is not it.</em></p>
+    <p class="seen">If something moved in your chest while reading these lines — this book was written for you. Not for everyone. For you.</p>
+  </section>
+
+  <section id="about">
+    <h2><span class="label">What this book is</span>An honest answer — not a comfortable one.</h2>
+    <p class="lede">I am not a guru. No ashram, no white robes, no five morning habits to sell you. I am a man from Delhi who got tired of every answer he was handed — and went looking with the one tool nobody encouraged: honest questions.</p>
+    <p><em>It Was Never You</em> takes the heaviest things you carry — guilt, the fear of God, the feeling that you are failing at life and at spirituality — and looks at them so honestly they cannot survive the looking. It starts with the questions you were told never to ask:</p>
+    <p class="q-ask">Who put me in this life without asking me?<br>Why would God create a world like this?<br>If my prayers go to the one who made my problems… what am I doing?</p>
+    <p>Then, step by step — simple logic, a little science, zero blind faith — it walks you to an answer that changes how you see your past, your prayers, your mistakes, and your death. By the last page, one question dies quietly: <em>“What is wrong with me?”</em> Because the answer is: nothing.</p>
+  </section>
+
+  <section id="inside">
+    <h2><span class="label">What is inside</span></h2>
+    <ul class="inside">
+      <li>Why “who put me here?” is not a sin — it is the most honest question you ever asked</li>
+      <li>The prayer system, examined: why the complaint counter is run by the one who made the problem</li>
+      <li>Karma theory put on trial — and why there was never anyone to blame</li>
+      <li>The 3 a.m. test that proves you have never controlled even your own thoughts</li>
+      <li>The pot that prayed to the potter — the discovery that breaks the whole system open</li>
+      <li>Why this world is not a machine God abandoned… but something far stranger, and far closer</li>
+      <li>The hardest question — <em>why would God dream a painful world?</em> — answered without one comforting lie</li>
+      <li>What actually happened to Buddha, Krishna, and Jesus at the end — and what the spiritual marketplace never tells you</li>
+      <li>The author’s confession: some days he still wants to fight with God — and why that is part of the answer</li>
+      <li>The “zoom in / zoom out” shift that lets you survive the storms without going numb</li>
+    </ul>
+    <p class="meta-line">13 chapters. 15 illustrations. Around 100 pages. No rules, no rituals, no homework. Read in two evenings — carried for life.</p>
+  </section>
+
+  <section id="quotes">
+    <h2><span class="label">From the book</span></h2>
+    <p class="quote">God gave you hunger… and made you pray to him for food.</p>
+    <p class="quote">You have spent twenty years putting a ghost on trial. Punishing a ghost. Waking up at 2 a.m. to whip a ghost.</p>
+    <p class="quote">There is no courtroom in the theatre.</p>
+    <p class="quote">You have never seen a dead thing. You have only seen places where the dream holds very still.</p>
+  </section>
+
+  <section id="gallery">
+    <h2><span class="label">Inside the pages</span>Fifteen hand-made illustrations — one idea each.</h2>
+    <div class="gallery">
+      <div class="plate"><img src="assets/il_pot.jpg" alt="The pot and the clay" loading="lazy"><div class="cap">The pot that prayed to the potter</div></div>
+      <div class="plate"><img src="assets/il_eye.jpg" alt="The dreaming eye" loading="lazy"><div class="cap">Everything is being dreamed — now</div></div>
+      <div class="plate"><img src="assets/il_zoom.jpg" alt="Zoom in, zoom out" loading="lazy"><div class="cap">Zoom in. Zoom out.</div></div>
+      <div class="plate"><img src="assets/il_anchor.jpg" alt="The anchor" loading="lazy"><div class="cap">The one thing no storm can take</div></div>
+    </div>
+  </section>
+
+  <section id="not" class="not">
+    <h2><span class="label">What this book is not</span></h2>
+    <p><b>Not a religious book.</b> No religion is attacked, and no religion is sold.</p>
+    <p><b>Not positive thinking.</b> It will not tell you to smile, manifest, or be grateful.</p>
+    <p><b>Not a guru book.</b> Zero rules. Zero followers asked for.</p>
+    <p><b>Not a difficult book.</b> Simple, direct language — readers who are not native English speakers finish it comfortably.</p>
+    <p><b>And not a comfortable book.</b> Some pages may shock you. Read slowly anyway. He wrote slowly.</p>
+  </section>
+
+  <section id="faq">
+    <h2><span class="label">Questions this book answers</span></h2>
+    <details><summary>Is my suffering really my karma?</summary><p>No. Karma-as-blame needs a free, separate doer who chose wrongly. Look closely and that doer cannot be found — thoughts, desires and actions arise from causes you never chose. Results are real; blame is the illusion. Your suffering was never a verdict against you.</p></details>
+    <details><summary>Does free will exist?</summary><p>Look for the “chooser” in your own experience. You find desires and fears settling on their own, and a voice claiming credit afterwards. When the doer dissolves, the guilt built on it dissolves too.</p></details>
+    <details><summary>What does “everything is God” mean?</summary><p>Science finds one vibrating energy beneath all matter; the saints call that one reality God. Not “God made the world,” but “everything is God” — one being appearing as many. Reached through honest questions, not blind faith.</p></details>
+    <details><summary>Is this against my religion?</summary><p>It does not attack any religion. It questions one picture of God — the separate king who keeps accounts — and offers another way of seeing, rooted in the oldest ideas of India. Many religious readers say it made their faith deeper.</p></details>
+    <details><summary>My English is not strong. Can I read it?</summary><p>Yes. It is written in simple, short sentences on purpose. And a full Russian edition — “Это был не ты” — is available.</p></details>
+    <details><summary>Are there rules, rituals, or homework?</summary><p>None. Each chapter ends with a single question to sit with. That is all.</p></details>
+  </section>
+
+  <section id="author">
+    <h2><span class="label">About the author</span></h2>
+    <div class="author"><div class="body">
+      <p>I am from Delhi, India. I studied science. I practiced Kriya Yoga under a teacher for more than three years, in the lineage of Sri Yukteshwar and Paramahansa Yogananda. I spent years inside temples, meditation halls, and spiritual gatherings — and years questioning everything I saw there.</p>
+      <p>I am not enlightened. I am not your guru. I wrote the book I needed ten years ago, when I was angry at God and ashamed of my anger. If you are carrying the same questions, this book is me sitting next to you, telling you honestly what I found.</p>
+    </div></div>
+  </section>
+
+  <section id="reviews">
+    <h2><span class="label">From readers</span></h2>
+    <div id="reader-quotes"></div>
+    <div class="ask-review">
+      <span class="label">If this book reached you</span>
+      <p>Then do one quiet thing for the next person who is still carrying it: leave an honest line where you bought it, or pass the book to someone you know needs it. One sentence is enough. A stranger in your exact pain is searching right now — and your words are what lets them find it.</p>
+      <p class="subhead">Leave a review where you bought it</p>
+      <div class="btn-row" id="review-buttons"></div>
+      <p class="subhead">Or share it with someone</p>
+      <div class="btn-row" id="share-buttons"></div>
+    </div>
+  </section>
+
+  <section id="buy">
+    <h2><span class="label">Get the book</span>Ebook &amp; paperback · English &amp; Russian</h2>
+    <div class="cta" id="buy-buttons"></div>
+    <p class="tagline" style="margin-top:30px"><b>It was never you.</b> Find out who it was.</p>
+  </section>
+
+  <section id="contact">
+    <h2><span class="label">Write to me</span>This is me, sitting next to you.</h2>
+    <p>If the book reached something in you, or you simply want to talk about the questions — write. I read everything.</p>
+    <div class="contact" id="contact-links"></div>
+  </section>
+
+</div>
+
+<footer>
+  <p>© <span id="yr"></span> Abhijeet Rai · It Was Never You</p>
+  <p id="footer-links"></p>
+</footer>
+
+<script>window.PAGE_LANG="en";</script>
+<script src="config.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
