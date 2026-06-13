@@ -70,15 +70,26 @@
     box.innerHTML = parts.join('<span style="color:var(--line)"> &nbsp;·&nbsp; </span>');
   }
 
-  /* ---------- FOOTER LINKS ---------- */
+  /* ---------- FOOTER LINKS (language-aware order) ---------- */
+  var LABELS = {
+    goodreads:"Goodreads", amazonAuthor:{en:"Amazon Author",ru:"Автор на Amazon"}, instagram:"Instagram",
+    wikipedia_en:"Wikipedia", wikipedia_ru:"Википедия", googleBooks:"Google Books",
+    livelib:"LiveLib", litresAuthor:{en:"Litres",ru:"Литрес"}, vk:"VK", dzen:"Dzen",
+    authorToday:"Author.Today", wikidata:"Wikidata", youtube:"YouTube",
+    newsletter:{en:"Newsletter",ru:"Рассылка"}
+  };
+  var FOOTER_ORDER = {
+    en:["goodreads","amazonAuthor","instagram","wikipedia_en","googleBooks","youtube","wikidata","newsletter"],
+    ru:["livelib","litresAuthor","vk","wikipedia_ru","dzen","authorToday","youtube","wikidata","newsletter"]
+  };
+  function lbl(key){ var v=LABELS[key]; return v && v.en ? t(v.en,v.ru) : (v||key); }
   function renderFooter(){
     var box = byId("footer-links"); if(!box) return;
     var s = C.social||{}, parts = [];
-    if(s.goodreads)    parts.push('<a href="'+esc(s.goodreads)+'" target="_blank" rel="noopener">Goodreads</a>');
-    if(s.amazonAuthor) parts.push('<a href="'+esc(s.amazonAuthor)+'" target="_blank" rel="noopener">'+t("Amazon Author","Автор на Amazon")+'</a>');
-    if(s.instagram)    parts.push('<a href="'+esc(s.instagram)+'" target="_blank" rel="noopener">Instagram</a>');
+    (FOOTER_ORDER[L]||[]).forEach(function(k){
+      if(s[k]) parts.push('<a href="'+esc(s[k])+'" target="_blank" rel="noopener">'+lbl(k)+'</a>');
+    });
     if(C.contact && C.contact.telegram) parts.push('<a href="https://t.me/'+esc(C.contact.telegram)+'" target="_blank" rel="noopener">Telegram</a>');
-    if(s.newsletter)   parts.push('<a href="'+esc(s.newsletter)+'" target="_blank" rel="noopener">'+t("Newsletter","Рассылка")+'</a>');
     if(C.contact && C.contact.email) parts.push('<a href="mailto:'+esc(C.contact.email)+'">Email</a>');
     box.innerHTML = parts.join(" · ");
   }
@@ -96,7 +107,7 @@
   /* ---------- sameAs JSON-LD (interconnection for Google/Yandex/AI) ---------- */
   function injectSameAs(){
     var s = C.social||{}, same = [];
-    ["goodreads","amazonAuthor","instagram","wikidata"].forEach(function(k){ if(s[k]) same.push(s[k]); });
+    Object.keys(s).forEach(function(k){ if(s[k] && s[k].trim()) same.push(s[k].trim()); });
     if(C.contact && C.contact.telegram) same.push("https://t.me/"+C.contact.telegram);
     if(!same.length) return;
     var node = { "@context":"https://schema.org","@type":"Person",

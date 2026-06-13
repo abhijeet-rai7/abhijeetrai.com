@@ -45,12 +45,29 @@ window.SITE_CONFIG = {
   /* ---- YOUR PROFILES ELSEWHERE ----
      These power the footer links AND the "sameAs" connections that tell
      Google / Yandex / AI these are all the same author (interconnection).
-     Add each url when the profile exists; empty ones are hidden. */
+     Add each url when the profile exists; empty ones are hidden automatically.
+     The English page shows the GLOBAL set; the Russian page shows the RUSSIAN
+     set first — so Russian readers (and Yandex) discover you through the places
+     they actually use. Fill whichever you create. */
   social: {
-    goodreads:    "",   // e.g. https://www.goodreads.com/author/show/XXXX
-    amazonAuthor: "",   // e.g. https://www.amazon.com/author/abhijeetrai
-    instagram:    "",   // e.g. https://www.instagram.com/abhijeet_rai_loves
-    wikidata:     "",   // e.g. https://www.wikidata.org/wiki/QXXXX
+    // ---- Global / English-world (Goodreads, Wikipedia, etc.) ----
+    goodreads:    "",   // https://www.goodreads.com/author/show/XXXX
+    amazonAuthor: "",   // https://www.amazon.com/author/abhijeetrai
+    instagram:    "",   // https://www.instagram.com/abhijeet_rai_loves
+    wikipedia_en: "",   // https://en.wikipedia.org/wiki/Abhijeet_Rai
+    googleBooks:  "",   // your Google Books author/book page
+
+    // ---- Russian-world (what Russians + Yandex actually use) ----
+    livelib:      "",   // https://www.livelib.ru/author/XXXX  (Russia's Goodreads)
+    litresAuthor: "",   // https://www.litres.ru/author/XXXX   (your Litres author page)
+    vk:           "",   // https://vk.com/XXXX                 (huge in Russia, Yandex-indexed)
+    wikipedia_ru: "",   // https://ru.wikipedia.org/wiki/XXXX  (Russian Wikipedia)
+    dzen:         "",   // https://dzen.ru/XXXX                (Yandex's content platform)
+    authorToday:  "",   // https://author.today/u/XXXX         (Russian reading community)
+
+    // ---- Shared / both worlds ----
+    wikidata:     "",   // https://www.wikidata.org/wiki/QXXXX (feeds BOTH Google & Yandex)
+    youtube:      "",   // your channel, if any
     newsletter:   ""    // your email-signup page, if any
   },
 
