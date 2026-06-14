@@ -8,6 +8,31 @@
   var byId = function(id){ return document.getElementById(id); };
   var esc = function(s){ return (s||"").replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;"); };
 
+  /* ---------- Amazon: open the visitor's local store (same KDP ASIN, all marketplaces) ---------- */
+  var AMZ_TLD = {
+    "Asia/Kolkata":"in","Asia/Calcutta":"in","Europe/London":"co.uk","Europe/Dublin":"co.uk",
+    "Europe/Berlin":"de","Europe/Vienna":"de","Europe/Zurich":"de","Europe/Paris":"fr","Europe/Brussels":"fr",
+    "Europe/Madrid":"es","Europe/Rome":"it","Europe/Amsterdam":"nl","Europe/Stockholm":"se","Europe/Warsaw":"pl",
+    "Asia/Tokyo":"co.jp","Asia/Dubai":"ae","Asia/Riyadh":"sa","Asia/Singapore":"sg",
+    "America/Toronto":"ca","America/Vancouver":"ca","America/Edmonton":"ca","America/Winnipeg":"ca","America/Halifax":"ca",
+    "America/Sao_Paulo":"com.br","America/Mexico_City":"com.mx",
+    "Australia/Sydney":"com.au","Australia/Melbourne":"com.au","Australia/Brisbane":"com.au","Australia/Perth":"com.au"
+  };
+  function amazonTLD(){
+    try{
+      var tz = Intl.DateTimeFormat().resolvedOptions().timeZone || "";
+      if(AMZ_TLD[tz]) return AMZ_TLD[tz];
+      if(tz.indexOf("Australia/")===0) return "com.au";
+    }catch(e){}
+    return "com";
+  }
+  function localizeAmazon(url){
+    if(!url || url.indexOf("amazon.")<0) return url;
+    var m = url.match(/\/(?:dp|gp\/product|gp\/aw\/d)\/([A-Z0-9]{10})/i);
+    if(!m) return url;                       // no ASIN found -> leave the link as pasted
+    return "https://www.amazon."+amazonTLD()+"/dp/"+m[1];
+  }
+
   /* ---------- BUY BUTTONS ---------- */
   function renderBuy(){
     var box = byId("buy-buttons"); if(!box) return;
@@ -19,7 +44,7 @@
       var label = esc(b.label[L] || b.label.en);
       if(b.url && b.url.trim()){
         var cls = (id==="direct") ? "btn ghost" : "btn";
-        html += '<a class="'+cls+'" href="'+esc(b.url)+'" target="_blank" rel="noopener">'+label+'</a>';
+        html += '<a class="'+cls+'" href="'+esc(localizeAmazon(b.url))+'" target="_blank" rel="noopener">'+label+'</a>';
       } else {
         html += '<span class="btn soon">'+label+'<small>'+t("Coming soon","Скоро")+'</small></span>';
       }
@@ -33,7 +58,7 @@
     var html = "";
     (C.review||[]).forEach(function(r){
       if(r.url && r.url.trim()){
-        html += '<a href="'+esc(r.url)+'" target="_blank" rel="noopener">'+esc(r.label[L]||r.label.en)+'</a>';
+        html += '<a href="'+esc(localizeAmazon(r.url))+'" target="_blank" rel="noopener">'+esc(r.label[L]||r.label.en)+'</a>';
       }
     });
     box.innerHTML = html || '<span style="color:var(--muted);font-family:Arial,sans-serif;font-size:13px">'+
