@@ -82,6 +82,24 @@ After deploying, send the live URL to test it from multiple regions.
 - Create a **Wikidata** item for you and the book, then paste its URL into `config.js` (social.wikidata).
 - Link to this site from every store listing, Goodreads, and your Amazon Author page.
 
+## Your blog (it's built — here's how it works)
+There's now a **Reading / Эссе** section, linked from the header on both home pages:
+- English essays live in `website/blog/` · Russian essays in `website/ru/blog/`
+- Each essay is its own real page (its own web address), so Google/Yandex/AI can index each one.
+- You do **NOT** need Medium or any third-party editor. The content is plain text inside these files.
+
+**To add a new essay later (two easy ways):**
+1. *Simplest:* write the essay as plain text and send it to me — I'll generate the page, link it, and add it to the sitemap.
+2. *Yourself:* open `ESSAYS_for_blog.md` (in the project folder), add your essay in the same format
+   with a short slug, then run `python3 build_blog.py` from the project folder. It rebuilds all blog
+   pages automatically. Then re-upload the `website` folder to GitHub.
+Either way: no copy-pasting from an editor, no HTML by hand.
+
+## IMPORTANT after any change: re-upload to GitHub
+Whenever files change (new essay, new links in config.js), re-upload the changed files to your
+GitHub repo (or just re-drag the whole `website` folder and overwrite). The live site only updates
+when GitHub has the new files.
+
 ## Finish checklist
 - [ ] Paste store links into `config.js` as each listing goes live (Kindle, Apple, Google, Kobo, Litres, direct).
 - [ ] Paste review links into `config.js` once product pages exist.

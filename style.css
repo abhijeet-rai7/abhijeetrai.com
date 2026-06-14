@@ -91,5 +91,28 @@ footer{border-top:1px solid var(--line);padding:30px 0 70px;color:var(--muted);
   font-family:Arial,sans-serif;font-size:13px;text-align:center}
 footer a{color:var(--muted);margin:0 7px}
 
+/* nav link in header */
+.navlink{font-family:'Helvetica Neue',Arial,sans-serif;font-size:13px;letter-spacing:.12em;
+  text-transform:uppercase;color:var(--muted);text-decoration:none;margin-right:18px}
+.navlink:hover{color:var(--gold-bright)}
+
+/* blog index */
+.post-list{list-style:none;padding:0;margin:18px 0 0}
+.post-list li{padding:20px 0;border-bottom:1px solid var(--line)}
+.post-list a{font-size:24px;color:var(--ink);text-decoration:none;line-height:1.25;display:block}
+.post-list a:hover{color:var(--gold-bright)}
+.post-list .teaser{color:var(--muted);font-style:italic;font-size:16px;margin-top:6px}
+
+/* article (essay) page */
+.article{padding:54px 0 20px}
+.article .eyebrow{font-family:'Helvetica Neue',Arial,sans-serif;letter-spacing:.2em;text-transform:uppercase;
+  font-size:12px;color:var(--gold);margin-bottom:14px}
+.article h1{font-size:38px;font-weight:400;line-height:1.15;margin:0 0 26px}
+.article p{font-size:19px;line-height:1.8;margin:20px 0;color:#e3dfd4}
+.article p em{color:var(--gold-bright);font-style:italic}
+.article .cta-note{border-left:2px solid var(--gold);padding:14px 0 14px 18px;color:var(--muted);font-size:17px;margin-top:34px}
+.backlink{font-family:'Helvetica Neue',Arial,sans-serif;font-size:13px;letter-spacing:.06em;
+  display:inline-block;margin:30px 0 0;text-decoration:none}
+
 @media(max-width:600px){h1{font-size:36px}.tagline{font-size:19px}.quote{font-size:20px}body{font-size:17px}}
 @media(prefers-reduced-motion:reduce){#dust{display:none}}

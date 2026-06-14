@@ -11,7 +11,7 @@ window.SITE_CONFIG = {
      Order shown on the page = order here. Leave url:"" for now;
      add the link the moment a store goes live and it appears automatically. */
   buy: [
-    { id:"kindle",  label:{en:"Amazon Kindle", ru:"Amazon Kindle"}, url:"" },
+    { id:"kindle",  label:{en:"Amazon Kindle", ru:"Amazon Kindle"}, url:"https://www.amazon.com/dp/B0H56YXKWY" },
     { id:"apple",   label:{en:"Apple Books",   ru:"Apple Books"},   url:"" },
     { id:"google",  label:{en:"Google Play",   ru:"Google Play"},   url:"" },
     { id:"kobo",    label:{en:"Kobo",          ru:"Kobo"},          url:"" },
