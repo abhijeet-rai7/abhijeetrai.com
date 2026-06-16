@@ -15,7 +15,7 @@ window.SITE_CONFIG = {
     { id:"apple",   label:{en:"Apple Books",   ru:"Apple Books"},   url:"" },
     { id:"google",  label:{en:"Google Play",   ru:"Google Play"},   url:"" },
     { id:"kobo",    label:{en:"Kobo",          ru:"Kobo"},          url:"" },
-    { id:"litres",  label:{en:"Litres",        ru:"Литрес"},        url:"" },
+    { id:"litres",  label:{en:"Litres",        ru:"Литрес"},        url:"https://www.litres.ru/book/abhidzhit-ray/eto-byl-ne-ty-74047401/" },
     { id:"direct",  label:{en:"Buy direct (PDF / EPUB)", ru:"Купить напрямую (PDF / EPUB)"}, url:"" }
   ],
 
@@ -52,21 +52,21 @@ window.SITE_CONFIG = {
   social: {
     // ---- Global / English-world (Goodreads, Wikipedia, etc.) ----
     goodreads:    "",   // https://www.goodreads.com/author/show/XXXX
-    amazonAuthor: "",   // https://www.amazon.com/author/abhijeetrai
+    amazonAuthor: "https://www.amazon.com/-/e/B0H59GJ7LG",  // your Amazon author page (auto-localises by country)
     instagram:    "",   // https://www.instagram.com/abhijeet_rai_loves
     wikipedia_en: "",   // https://en.wikipedia.org/wiki/Abhijeet_Rai
     googleBooks:  "",   // your Google Books author/book page
 
     // ---- Russian-world (what Russians + Yandex actually use) ----
     livelib:      "",   // https://www.livelib.ru/author/XXXX  (Russia's Goodreads)
-    litresAuthor: "",   // https://www.litres.ru/author/XXXX   (your Litres author page)
+    litresAuthor: "https://www.litres.ru/author/abhidzhit-ray/",   // your Litres author page
     vk:           "",   // https://vk.com/XXXX                 (huge in Russia, Yandex-indexed)
     wikipedia_ru: "",   // https://ru.wikipedia.org/wiki/XXXX  (Russian Wikipedia)
     dzen:         "",   // https://dzen.ru/XXXX                (Yandex's content platform)
     authorToday:  "",   // https://author.today/u/XXXX         (Russian reading community)
 
     // ---- Shared / both worlds ----
-    wikidata:     "",   // https://www.wikidata.org/wiki/QXXXX (feeds BOTH Google & Yandex)
+    wikidata:     "",   // PASTE your new Wikidata item URL here, e.g. https://www.wikidata.org/wiki/Q1234567
     youtube:      "",   // your channel, if any
     newsletter:   ""    // your email-signup page, if any
   },

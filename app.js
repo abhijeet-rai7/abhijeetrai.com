@@ -28,9 +28,12 @@
   }
   function localizeAmazon(url){
     if(!url || url.indexOf("amazon.")<0) return url;
-    var m = url.match(/\/(?:dp|gp\/product|gp\/aw\/d)\/([A-Z0-9]{10})/i);
-    if(!m) return url;                       // no ASIN found -> leave the link as pasted
-    return "https://www.amazon."+amazonTLD()+"/dp/"+m[1];
+    var tld = amazonTLD();
+    var book = url.match(/\/(?:dp|gp\/product|gp\/aw\/d)\/([A-Z0-9]{10})/i);
+    if(book) return "https://www.amazon."+tld+"/dp/"+book[1];
+    var author = url.match(/\/(?:-\/e|stores\/author)\/([A-Z0-9]{10})/i);
+    if(author) return "https://www.amazon."+tld+"/-/e/"+author[1];
+    return url;                              // not a recognised pattern -> leave as pasted
   }
 
   /* ---------- BUY BUTTONS ---------- */
