@@ -66,7 +66,7 @@ window.SITE_CONFIG = {
     authorToday:  "",   // https://author.today/u/XXXX         (Russian reading community)
 
     // ---- Shared / both worlds ----
-    wikidata:     "",   // PASTE your new Wikidata item URL here, e.g. https://www.wikidata.org/wiki/Q1234567
+    wikidata:     "https://www.wikidata.org/wiki/Q140241189",   // PASTE your new Wikidata item URL here, e.g. https://www.wikidata.org/wiki/Q1234567
     youtube:      "",   // your channel, if any
     newsletter:   ""    // your email-signup page, if any
   },
