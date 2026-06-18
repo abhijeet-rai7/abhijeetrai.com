@@ -8,15 +8,16 @@
 window.SITE_CONFIG = {
 
   /* ---- WHERE TO BUY (ebook + paperback) ----
-     Order shown on the page = order here. Leave url:"" for now;
-     add the link the moment a store goes live and it appears automatically. */
+     The English and Russian editions are SEPARATE listings, so each store has
+     two links: url:{ en:"...", ru:"..." }. Fill the one(s) you have; leave ""
+     and that button shows "Coming soon / Скоро" on that language's page. */
   buy: [
-    { id:"kindle",  label:{en:"Amazon Kindle", ru:"Amazon Kindle"}, url:"https://www.amazon.com/dp/B0H56YXKWY" },
-    { id:"apple",   label:{en:"Apple Books",   ru:"Apple Books"},   url:"" },
-    { id:"google",  label:{en:"Google Play",   ru:"Google Play"},   url:"" },
-    { id:"kobo",    label:{en:"Kobo",          ru:"Kobo"},          url:"" },
-    { id:"litres",  label:{en:"Litres",        ru:"Литрес"},        url:"https://www.litres.ru/book/abhidzhit-ray/eto-byl-ne-ty-74047401/" },
-    { id:"direct",  label:{en:"Buy direct (PDF / EPUB)", ru:"Купить напрямую (PDF / EPUB)"}, url:"" }
+    { id:"kindle",  label:{en:"Amazon Kindle", ru:"Amazon Kindle"}, url:{ en:"https://www.amazon.com/dp/B0H56YXKWY", ru:"" } },
+    { id:"apple",   label:{en:"Apple Books",   ru:"Apple Books"},   url:{ en:"http://books.apple.com/us/book/id6779944693", ru:"" } },
+    { id:"google",  label:{en:"Google Play",   ru:"Google Play"},   url:{ en:"https://play.google.com/store/books/details?id=kVLmEQAAQBAJ", ru:"https://play.google.com/store/books/details?id=LlPmEQAAQBAJ" } },
+    { id:"kobo",    label:{en:"Kobo",          ru:"Kobo"},          url:{ en:"", ru:"" } },
+    { id:"litres",  label:{en:"Litres",        ru:"Литрес"},        url:{ en:"", ru:"https://www.litres.ru/book/abhidzhit-ray/eto-byl-ne-ty-74047401/" } },
+    { id:"direct",  label:{en:"Buy direct (PDF / EPUB)", ru:"Купить напрямую (PDF / EPUB)"}, url:{ en:"", ru:"" } }
   ],
 
   /* Which buy buttons appear on each language page (by id, in this order). */
@@ -55,7 +56,7 @@ window.SITE_CONFIG = {
     amazonAuthor: "https://www.amazon.com/-/e/B0H59GJ7LG",  // your Amazon author page (auto-localises by country)
     instagram:    "",   // https://www.instagram.com/abhijeet_rai_loves
     wikipedia_en: "",   // https://en.wikipedia.org/wiki/Abhijeet_Rai
-    googleBooks:  "",   // your Google Books author/book page
+    googleBooks:  "https://books.google.com/books?id=kVLmEQAAQBAJ",   // Google Books (English edition)
 
     // ---- Russian-world (what Russians + Yandex actually use) ----
     livelib:      "",   // https://www.livelib.ru/author/XXXX  (Russia's Goodreads)

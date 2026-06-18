@@ -45,9 +45,10 @@
     order.forEach(function(id){
       var b = map[id]; if(!b) return;
       var label = esc(b.label[L] || b.label.en);
-      if(b.url && b.url.trim()){
+      var u = (typeof b.url === "string") ? b.url : ((b.url && b.url[L]) || "");
+      if(u && u.trim()){
         var cls = (id==="direct") ? "btn ghost" : "btn";
-        html += '<a class="'+cls+'" href="'+esc(localizeAmazon(b.url))+'" target="_blank" rel="noopener">'+label+'</a>';
+        html += '<a class="'+cls+'" href="'+esc(localizeAmazon(u))+'" target="_blank" rel="noopener">'+label+'</a>';
       } else {
         html += '<span class="btn soon">'+label+'<small>'+t("Coming soon","Скоро")+'</small></span>';
       }
