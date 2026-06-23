@@ -1,25 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-        xmlns:xhtml="http://www.w3.org/1999/xhtml">
-  <url>
-    <loc>https://abhijeetrai.com/</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://abhijeetrai.com/"/>
-    <xhtml:link rel="alternate" hreflang="ru" href="https://abhijeetrai.com/ru/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://abhijeetrai.com/"/>
-    <priority>1.0</priority>
-  </url>
-  <url>
-    <loc>https://abhijeetrai.com/ru/</loc>
-    <xhtml:link rel="alternate" hreflang="ru" href="https://abhijeetrai.com/ru/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://abhijeetrai.com/"/>
-    <priority>1.0</priority>
-  </url>
-  <url><loc>https://abhijeetrai.com/blog/</loc><priority>0.8</priority></url>
-  <url><loc>https://abhijeetrai.com/ru/blog/</loc><priority>0.8</priority></url>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <url><loc>https://abhijeetrai.com/</loc><xhtml:link rel="alternate" hreflang="en" href="https://abhijeetrai.com/"/><xhtml:link rel="alternate" hreflang="ru" href="https://abhijeetrai.com/ru/"/><xhtml:link rel="alternate" hreflang="x-default" href="https://abhijeetrai.com/"/><priority>1.0</priority></url>
+  <url><loc>https://abhijeetrai.com/ru/</loc><xhtml:link rel="alternate" hreflang="ru" href="https://abhijeetrai.com/ru/"/><xhtml:link rel="alternate" hreflang="en" href="https://abhijeetrai.com/"/><priority>1.0</priority></url>
+  <url><loc>https://abhijeetrai.com/blog/</loc><xhtml:link rel="alternate" hreflang="en" href="https://abhijeetrai.com/blog/"/><xhtml:link rel="alternate" hreflang="ru" href="https://abhijeetrai.com/ru/blog/"/><priority>0.8</priority></url>
+  <url><loc>https://abhijeetrai.com/ru/blog/</loc><xhtml:link rel="alternate" hreflang="ru" href="https://abhijeetrai.com/ru/blog/"/><xhtml:link rel="alternate" hreflang="en" href="https://abhijeetrai.com/blog/"/><priority>0.8</priority></url>
   <url><loc>https://abhijeetrai.com/blog/is-your-suffering-your-karma.html</loc><priority>0.7</priority></url>
   <url><loc>https://abhijeetrai.com/blog/does-free-will-exist.html</loc><priority>0.7</priority></url>
   <url><loc>https://abhijeetrai.com/blog/why-would-a-loving-god.html</loc><priority>0.7</priority></url>
   <url><loc>https://abhijeetrai.com/blog/how-to-let-go-of-guilt.html</loc><priority>0.7</priority></url>
+  <url><loc>https://abhijeetrai.com/blog/overthinking-at-night.html</loc><priority>0.7</priority></url>
+  <url><loc>https://abhijeetrai.com/blog/why-am-i-so-hard-on-myself.html</loc><priority>0.7</priority></url>
+  <url><loc>https://abhijeetrai.com/blog/why-do-i-feel-empty.html</loc><priority>0.7</priority></url>
+  <url><loc>https://abhijeetrai.com/blog/everyone-doing-better-than-me.html</loc><priority>0.7</priority></url>
+  <url><loc>https://abhijeetrai.com/blog/why-cant-i-stick-to-anything.html</loc><priority>0.7</priority></url>
+  <url><loc>https://abhijeetrai.com/blog/stop-caring-what-people-think.html</loc><priority>0.7</priority></url>
+  <url><loc>https://abhijeetrai.com/blog/why-do-i-lose-my-temper.html</loc><priority>0.7</priority></url>
+  <url><loc>https://abhijeetrai.com/blog/how-to-keep-going.html</loc><priority>0.7</priority></url>
   <url><loc>https://abhijeetrai.com/ru/blog/stradanie-i-karma.html</loc><priority>0.7</priority></url>
   <url><loc>https://abhijeetrai.com/ru/blog/kak-otpustit-vinu.html</loc><priority>0.7</priority></url>
   <url><loc>https://abhijeetrai.com/ru/blog/pochemu-bog-molchit.html</loc><priority>0.7</priority></url>
@@ -27,4 +23,12 @@
   <url><loc>https://abhijeetrai.com/ru/blog/v-chem-smysl-zhizni.html</loc><priority>0.7</priority></url>
   <url><loc>https://abhijeetrai.com/ru/blog/strah-smerti.html</loc><priority>0.7</priority></url>
   <url><loc>https://abhijeetrai.com/ru/blog/pochemu-ne-mogu-izmenit-zhizn.html</loc><priority>0.7</priority></url>
+  <url><loc>https://abhijeetrai.com/ru/blog/trevoga-po-nocham.html</loc><priority>0.7</priority></url>
+  <url><loc>https://abhijeetrai.com/ru/blog/pochemu-ya-strog-k-sebe.html</loc><priority>0.7</priority></url>
+  <url><loc>https://abhijeetrai.com/ru/blog/pochemu-mne-pusto.html</loc><priority>0.7</priority></url>
+  <url><loc>https://abhijeetrai.com/ru/blog/u-vseh-poluchaetsya-luchshe.html</loc><priority>0.7</priority></url>
+  <url><loc>https://abhijeetrai.com/ru/blog/chuzhoe-mnenie.html</loc><priority>0.7</priority></url>
+  <url><loc>https://abhijeetrai.com/ru/blog/pochemu-ya-sryvayus.html</loc><priority>0.7</priority></url>
+  <url><loc>https://abhijeetrai.com/ru/blog/kak-zhit-kogda-vse-rushitsya.html</loc><priority>0.7</priority></url>
+  <url><loc>https://abhijeetrai.com/ru/blog/pochemu-mne-odinoko.html</loc><priority>0.7</priority></url>
 </urlset>

@@ -13,7 +13,7 @@ window.SITE_CONFIG = {
      and that button shows "Coming soon / Скоро" on that language's page. */
   buy: [
     { id:"kindle",  label:{en:"Amazon Kindle", ru:"Amazon Kindle"}, url:{ en:"https://www.amazon.com/dp/B0H56YXKWY", ru:"" } },
-    { id:"apple",   label:{en:"Apple Books",   ru:"Apple Books"},   url:{ en:"http://books.apple.com/us/book/id6779944693", ru:"" } },
+    { id:"apple",   label:{en:"Apple Books",   ru:"Apple Books"},   url:{ en:"https://books.apple.com/us/book/id6779944693", ru:"" } },
     { id:"google",  label:{en:"Google Play",   ru:"Google Play"},   url:{ en:"https://play.google.com/store/books/details?id=kVLmEQAAQBAJ", ru:"https://play.google.com/store/books/details?id=LlPmEQAAQBAJ" } },
     { id:"kobo",    label:{en:"Kobo",          ru:"Kobo"},          url:{ en:"", ru:"" } },
     { id:"litres",  label:{en:"Litres",        ru:"Литрес"},        url:{ en:"", ru:"https://www.litres.ru/book/abhidzhit-ray/eto-byl-ne-ty-74047401/" } },

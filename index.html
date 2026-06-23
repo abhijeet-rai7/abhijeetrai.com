@@ -9,6 +9,8 @@
    and never blocks the EN/RU toggle. Search engines index both pages normally. */
 (function(){
   try{
+    var ua=(navigator.userAgent||'').toLowerCase();
+    if(/bot|crawl|spider|slurp|bing|yandex|google|duckduck|baidu|ia_archiver|facebookexternalhit/.test(ua)) return; // never redirect crawlers
     var pref=localStorage.getItem('lang_pref');
     if(pref==='en') return;                 // user chose English before — stay
     var toRu=function(){location.replace(location.protocol==='file:'?'ru/index.html':'ru/');};
@@ -23,7 +25,7 @@
 <link rel="canonical" href="https://abhijeetrai.com/" />
 <meta name="author" content="Abhijeet Rai" />
 <meta name="robots" content="index, follow, max-image-preview:large" />
-<meta name="theme-color" content="#0b0e16" />
+<meta name="theme-color" content="#fbf7ef" />
 
 <meta property="og:type" content="book" />
 <meta property="og:site_name" content="Abhijeet Rai" />
