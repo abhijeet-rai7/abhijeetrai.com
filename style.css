@@ -4,19 +4,19 @@
    self-hosted Lora + IBM Plex Serif (same as the printed book).
    ============================================================ */
 
-@font-face{font-family:'Lora';src:url('assets/fonts/Lora-Regular.ttf') format('truetype');font-weight:400;font-style:normal;font-display:swap}
-@font-face{font-family:'Lora';src:url('assets/fonts/Lora-Italic.ttf') format('truetype');font-weight:400;font-style:italic;font-display:swap}
-@font-face{font-family:'Lora';src:url('assets/fonts/Lora-Bold.ttf') format('truetype');font-weight:700;font-style:normal;font-display:swap}
-@font-face{font-family:'Lora';src:url('assets/fonts/Lora-BoldItalic.ttf') format('truetype');font-weight:700;font-style:italic;font-display:swap}
-@font-face{font-family:'Plex Serif';src:url('assets/fonts/IBMPlexSerif-Bold.ttf') format('truetype');font-weight:700;font-style:normal;font-display:swap}
+@font-face{font-family:'Lora';src:url('assets/fonts/Lora-Regular.woff') format('woff');font-weight:400;font-style:normal;font-display:swap}
+@font-face{font-family:'Lora';src:url('assets/fonts/Lora-Italic.woff') format('woff');font-weight:400;font-style:italic;font-display:swap}
+@font-face{font-family:'Lora';src:url('assets/fonts/Lora-Bold.woff') format('woff');font-weight:700;font-style:normal;font-display:swap}
+@font-face{font-family:'Lora';src:url('assets/fonts/Lora-BoldItalic.woff') format('woff');font-weight:700;font-style:italic;font-display:swap}
+@font-face{font-family:'Plex Serif';src:url('assets/fonts/IBMPlexSerif-Bold.woff') format('woff');font-weight:700;font-style:normal;font-display:swap}
 
 :root{
   --bg:#fbf7ef;        /* warm ivory paper */
   --bg2:#f4eddf;       /* slightly deeper warm band */
   --panel:#fffdf8;     /* card / panel */
   --ink:#2e2a24;       /* warm espresso text (soft, not pure black) */
-  --muted:#766c5e;     /* warm taupe, secondary text */
-  --gold:#9a6b1e;      /* deep readable gold — links, labels */
+  --muted:#5f5648;     /* warm taupe, secondary text (WCAG-AA on ivory) */
+  --gold:#86591a;      /* deep readable gold — links, labels (WCAG-AA on ivory) */
   --gold-soft:#b98a2e; /* warmer amber — large display accents */
   --line:#e7ddcb;      /* soft warm hairline */
   --maxw:720px;
